@@ -1,6 +1,8 @@
+/* selecting the html variable for the JS code*/
 const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 
 const seconds = timeNodes
+    // setting the points needed for stipulate the time
     .map(node => node.dataset.time)
     .map(timeCode => {
         const [mins, secs] = timeCode.split(':').map(parseFloat);
